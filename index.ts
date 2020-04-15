@@ -1,25 +1,19 @@
 import express from 'express'
 import cors from 'cors'
-require('dotenv').config()
 
 const app = express()
 
 app.use(express.json())
-app.use(express.urlencoded({ extended: false }));
-
+app.use(express.urlencoded({ extended: false }))
 
 const corsConfig = {
-    origin: true,
-    credentials: true,
+  origin: true,
+  credentials: true,
 }
 
-app.use(cors(corsConfig));
-app.options('*', cors(corsConfig));
+app.use(cors(corsConfig))
+app.options('*', cors(corsConfig))
 
+app.get('/', (req, res) => res.send('PONG'))
 
-app.get('/', (req, res) => res.send("PONG"))
-
-app.listen(
-    process.env.PORT,
-    () => console.log(`Server started on ${process.env.PORT}`)
-)
+app.listen(process.env.PORT, () => console.log(`Server started on ${process.env.PORT}`))
