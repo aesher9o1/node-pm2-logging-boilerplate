@@ -1,0 +1,30 @@
+{
+  "name": "text-sql",
+  "version": "0.0.1",
+  "description": "POC to convert text to SQL",
+  "main": "src/index.ts",
+  "scripts": {
+    "lint": "eslint ./*.ts",
+    "format": "eslint *.ts --fix",
+    "start": "npm run build && node dist/index.js",
+    "start:dev": "nodemon",
+    "build": "tsc"
+  },
+  "author": "aesher9o1",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^13.9.0",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-typescript": "^7.0.0",
+    "prettier": "^1.19.1",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
